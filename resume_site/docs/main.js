@@ -39,6 +39,8 @@ pointLight.position.set(50, 50, 50);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
+
+
 // Helpers
 
  //const lightHelper = new THREE.PointLightHelper(pointLight)
@@ -133,7 +135,7 @@ var teaching_img = new THREE.Mesh(
 );
 
 // Position the image near the University of Michigan section
-teaching_img.position.z = 32;
+teaching_img.position.z = 30;
 teaching_img.position.x = -3;
 teaching_img.rotation.y = Math.PI / 4; // Adjust the angle as needed
 scene.add(teaching_img);
@@ -145,7 +147,7 @@ var bridgify = new THREE.Mesh(
 );
 
 // Position the image near the University of Michigan section
-bridgify.position.z = 38;
+bridgify.position.z = 35;
 bridgify.position.x = -3;
 bridgify.rotation.y = Math.PI / 4; // Adjust the angle as needed
 
@@ -160,7 +162,7 @@ const foodMat = new THREE.MeshStandardMaterial({
   roughness: 5,
 });
 const foodMesh = new THREE.Mesh( foodGeo, foodMat ); 
-foodMesh.position.z = 47;
+foodMesh.position.z = 42;
 foodMesh.position.x = -3;
 
 scene.add(foodMesh);
@@ -209,16 +211,35 @@ scene.add(directionalLight);
 
 // Position the image near the University of Michigan section
 
+// TorusKnot
+const torusKnotGeometry = new THREE.TorusKnotGeometry(2, 1, 256, 32, 2, 3);
+const torusKnotMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+
+
+const cometTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture.png');
+const cometMat = new THREE.MeshStandardMaterial({
+  map: cometTexture,
+  metalness: 1,
+  roughness: 5,
+});
+const torusKnot = new THREE.Mesh(torusKnotGeometry, cometMat);
+torusKnot.position.set(-100, 30, -20); // Set initial position at the left top corner
+torusKnot.geometry = new THREE.TorusKnotGeometry(1, 1, 256, 32, 2, 3);
+torusKnot.geometry.scale(-1, 1, 1); // Reverse normals
+scene.add(torusKnot);
 
 
 
 // Scroll Animation
 var prevScrollY = 0;
 var initialBlockRotationX = block_m.rotation.x;
+var isInFunSection = false;
+
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   const deltaY = window.scrollY - prevScrollY;
 
+  isInFunSection =  (t < 200) ? true : false;
 
   // Adjust the rotation of block_m based on scroll direction
   block_m.rotation.x = Math.max(
@@ -242,7 +263,6 @@ moveCamera();
 
 // Animation Loop
 var orbitSpeed = 0.02; // Adjust the speed of the orbit
-
 function animate() {
   requestAnimationFrame(animate);
 
@@ -254,6 +274,13 @@ function animate() {
 
   moon.rotation.x += 0.005;
   foodMesh.rotation.x += 0.005
+
+  if (isInFunSection) {
+    torusKnot.position.x += 0.1; // Adjust the speed and direction based on your needs
+    torusKnot.position.y -= 0.1; // Adjust the speed and direction based on your needs
+    torusKnot.position.z += 0.01; // Adjust the speed and direction based on your needs
+
+  }
 
 
 

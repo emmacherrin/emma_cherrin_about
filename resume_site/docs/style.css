@@ -100,7 +100,7 @@ canvas {
   header {
     background: var(--text-bg);
     grid-column: 2 / span 5;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Specify Open Sans and fallback to sans-serif */
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
