@@ -6,7 +6,7 @@
     </style>    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emma Cherrin About</title>
   </head>
@@ -145,8 +145,10 @@
 
     </main>
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/v0.158.0/three.js'></script>
-    <script src="script.js"></script>
+    <script type="module">
+      import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.123.0/build/three.module.js';
+      import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.123.0/examples/jsm/loaders/GLTFLoader.js';
+    </script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
