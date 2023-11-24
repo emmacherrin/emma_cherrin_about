@@ -1,10 +1,10 @@
 import './style.css';
-import * as THREE from './three.module.min.js';
+import * as THREE from 'three';
 
 // Setup
-
+console.log('Made it to main')
 const scene = new THREE.Scene();
-
+console.log('made a scene')
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
