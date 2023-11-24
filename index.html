@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Permissions-Policy" content="user-id=()" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap');
     </style>    
-    <meta http-equiv="Permissions-Policy" content="user-id=()" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@<version>/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+        }
+      }
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
