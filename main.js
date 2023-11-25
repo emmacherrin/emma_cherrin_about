@@ -60,7 +60,7 @@ scene.background = spaceTexture;
 
 // Avatar
 var loader = new THREE.TextureLoader();
-var imagePath = '../../photos/';  // Adjust the path to your "photos" folder
+var imagePath = './emma_cherrin_about/dist/photos/';  // Adjust the path to your "photos" folder
 
 var mats = [
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching.jpeg') }),
@@ -96,8 +96,8 @@ block_m.rotateX(30);
 scene.add(block_m);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('../../moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('../../normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(imagePath + './moon.jpg');
+const normalTexture = new THREE.TextureLoader().load(imagePath + './normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
