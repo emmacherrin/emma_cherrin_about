@@ -136,7 +136,7 @@ var bridgify = new THREE.Mesh(
 );
 
 // Position the image near the University of Michigan section
-bridgify.position.z = 43;
+bridgify.position.z = 41;
 bridgify.position.x = -3;
 bridgify.rotation.y = Math.PI / 4; // Adjust the angle as needed
 
