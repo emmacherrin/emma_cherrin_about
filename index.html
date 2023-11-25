@@ -13,17 +13,20 @@
         }
       }
     </script>
+    <base href="/emma_cherrin_about/">
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emma Cherrin About</title>
+    <title>Emma Cherrin About Page</title>
+      <!-- webpack-bundle-head -->
+
   </head>
   <body>
     <canvas id="bg"></canvas>   
 
     <main>
-
+    <!-- Existing content -->
       <header>
         <h1>Emma Cherrin</h1>
         <h3>Computer Science x Business @ University of Michigan</h3>
@@ -69,7 +72,7 @@
             <ul>
               <li><span>Design and implement the tech stack for an Augmented Reality (AR) interface that supports astronauts on lunar missions including navigation, geological sampling, and communication with the Mission Control Center.</span></li>
               <li><span>Develop Mission Control Center dashboard for real-time astronaut communication and data sharing, using React/TypeScript, Fluent 2, MongoDB, Redis, and WebSocket for real-time data and backend functionality.</span></li>
-              <li><span>Direct 13 team members for UI product development and concurrently manage three specialized committees within the Business team, overseeing financial management, external relations, and internal community-building.</span></li>
+              <li><span>Lead a team of User Experience and Computer Science students in the design and development of the Mission Control Center dashboard UI (User Interface). </span></li>
             </ul>
           </p>
     
@@ -132,17 +135,19 @@
         <h2><a href="https://github.com/emmacherrin?tab=repositories"><u>Projects</u></a></h2>
 
         <p>
-          <strong>Restaurant Review and Recommendation Backend</strong><br>
+          <strong>Restaurant Review and Recommendation Backend</strong><br> 
+          <i>(Python, MySQL)</i><br>
           <ul>
-            <li><span>Designed and implemented a secure user authentication and authorization system using Flask and Flask-JWT-Extended.</span></li>
-            <li><span>Utilized password hashing techniques for security and JWT tokens for user authorization.</span></li>
-            <li><span>Developed a MySQL relational database along with storing restaurant and dish data.</span></li>
-            <li><span>Implemented database table creation and management scripts to ensure scalability.</span></li>
+            <li><span>Developed a MySQL relational database storing restaurant and dish data using foreign key relationships. Implemented database table creation and management scripts.
+            </span></li>
+            <li><span>Designed authentication mechanism using Flask-JWT-Extended. Created routes for user registration, login, and logout.
+            </span></li>
           </ul>
         </p>
 
         <p>
           <strong>Relational Database Project</strong><br>
+          <i>(C++)</i><br>
           <ul>
             <li><span>Wrote a program to emulate a relational database with an interface based on a subset of a standard query language.</span></li>
           </ul>
@@ -150,15 +155,18 @@
 
         <p>
           <strong>Class Forum Subject Identifier</strong><br>
+          <i>(C++)</i><br>
           <ul>
-            <li><span>Utilized natural language processing (NLP) and machine learning (ML) techniques to write a program that automatically identifies subjects of student questions on a class forum.</span></li>
+            <li><span>Using the NLP Bag of Words model, this program created a classifier to determine which thread and/or subject-matter posts on the educational platform Piazza would fall under. The classifier created was a simplified version of the “Multivariate Bernoulli Naive Bayes Classifier”.
+            </span></li>
           </ul>
         </p>
 
         <p>
           <strong>This Personal Website!</strong><br>
+          <i>(JavaScript, Three.js)</i><br>
           <ul>
-            <li><span>Designed and implemented frontend of personal website using Three.js, a JavaScript library that leverages WebGL to create interactive and visually engaging 3D graphics and animations.</span></li>
+            <li><span>Designed and implemented a personal website with a space-themed aesthetic, utilizing Three.js for dynamic and engaging animations.</span></li>
           </ul>
         </p>
       </article>
@@ -179,9 +187,9 @@
       </article>
     </section>
 
+    <script type="module" defer src="./dist/bundle.js"></script>
+    <!-- webpack-bundle-body -->
     </main>
-
-    <script type="module" defer src="./main.js"></script>
 
   </body>
 </html>

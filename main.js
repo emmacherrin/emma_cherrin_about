@@ -2,9 +2,9 @@ import './style.css';
 import * as THREE from 'three';
 
 // Setup
-console.log('Made it to main')
+
 const scene = new THREE.Scene();
-console.log('made a scene')
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
@@ -37,16 +37,6 @@ pointLight.position.set(50, 50, 50);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
-
-
-
-// Helpers
-
- //const lightHelper = new THREE.PointLightHelper(pointLight)
- //const gridHelper = new THREE.GridHelper(200, 50);
-//scene.add(lightHelper, gridHelper)
-
-// const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
@@ -212,8 +202,6 @@ scene.add(directionalLight);
 
 // TorusKnot
 const torusKnotGeometry = new THREE.TorusKnotGeometry(2, 1, 256, 32, 2, 3);
-const torusKnotMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
-
 
 const cometTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture.png');
 const cometMat = new THREE.MeshStandardMaterial({
@@ -226,8 +214,6 @@ torusKnot.position.set(-100, 30, -20); // Set initial position at the left top c
 torusKnot.geometry = new THREE.TorusKnotGeometry(1, 1, 256, 32, 2, 3);
 torusKnot.geometry.scale(-1, 1, 1); // Reverse normals
 scene.add(torusKnot);
-
-
 
 // Scroll Animation
 var prevScrollY = 0;
