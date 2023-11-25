@@ -31,6 +31,18 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader', // or 'url-loader' depending on your preference
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/', // specify the output directory for images
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
