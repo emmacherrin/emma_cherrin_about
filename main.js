@@ -60,7 +60,7 @@ scene.background = spaceTexture;
 
 // Avatar
 var loader = new THREE.TextureLoader();
-var imagePath = './emma_cherrin_about/dist/photos/';  // Adjust the path to your "photos" folder
+var imagePath = '../../';  // Adjust the path to your "photos" folder
 
 var mats = [
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching.jpeg') }),
