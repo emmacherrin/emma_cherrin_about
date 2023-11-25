@@ -109,7 +109,7 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 16;
+moon.position.z = 19;
 moon.position.setX(-10);
 
 emma.position.z = -5;
@@ -124,7 +124,7 @@ var teaching_img = new THREE.Mesh(
 ); 
 
 // Position the image near the University of Michigan section
-teaching_img.position.z = 30;
+teaching_img.position.z = 33;
 teaching_img.position.x = -3;
 teaching_img.rotation.y = Math.PI / 4; // Adjust the angle as needed
 scene.add(teaching_img);
@@ -136,7 +136,7 @@ var bridgify = new THREE.Mesh(
 );
 
 // Position the image near the University of Michigan section
-bridgify.position.z = 35;
+bridgify.position.z = 38;
 bridgify.position.x = -3;
 bridgify.rotation.y = Math.PI / 4; // Adjust the angle as needed
 
@@ -151,7 +151,7 @@ const foodMat = new THREE.MeshStandardMaterial({
   roughness: 5,
 });
 const foodMesh = new THREE.Mesh( foodGeo, foodMat ); 
-foodMesh.position.z = 42;
+foodMesh.position.z = 45;
 foodMesh.position.x = -3;
 
 scene.add(foodMesh);
