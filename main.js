@@ -55,12 +55,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('../../space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 var loader = new THREE.TextureLoader();
-var imagePath = '../../';  // Adjust the path to your "photos" folder
+var imagePath = './';  // Adjust the path to your "photos" folder
 
 var mats = [
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching-min.jpeg') }),
