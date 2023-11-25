@@ -63,12 +63,12 @@ var loader = new THREE.TextureLoader();
 var imagePath = '../../';  // Adjust the path to your "photos" folder
 
 var mats = [
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching.jpeg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'group_nasa.jpg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase.jpeg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase.jpeg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'in_ship.jpeg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase.jpeg') })
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching-min.jpeg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'group_nasa-min.jpg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase-min.jpeg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase-min.jpeg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'in_ship-min.jpeg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase-min.jpeg') })
 ];
 
 var geom = new THREE.BoxGeometry(3, 3, 3);
@@ -79,10 +79,10 @@ scene.add(emma);
 // Block M
 
 const geometry_m = new THREE.PlaneGeometry(1, 1);
-const texture_m = new THREE.TextureLoader().load('block_m.png');
+const texture_m = new THREE.TextureLoader().load('block_m-min.png');
 
 // Use MeshBasicMaterial with the loaded texture
-const material_m = new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'block_m.png') });
+const material_m = new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'block_m-min.png') });
 
 // Create the plane with the new material
 const block_m = new THREE.Mesh(geometry_m, material_m);
@@ -96,8 +96,8 @@ block_m.rotateX(30);
 scene.add(block_m);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load(imagePath + './moon.jpg');
-const normalTexture = new THREE.TextureLoader().load(imagePath + './normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(imagePath + 'moon-min.jpg');
+const normalTexture = new THREE.TextureLoader().load(imagePath + 'normal-min.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -120,8 +120,8 @@ emma.position.x = 2;
 // Image "pop up" near the University of Michigan section
 var teaching_img = new THREE.Mesh(
   new THREE.PlaneGeometry(2, 2), // Adjust the size based on your needs
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching.jpeg') })
-);
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching-min.jpeg') })
+); 
 
 // Position the image near the University of Michigan section
 teaching_img.position.z = 30;
@@ -132,7 +132,7 @@ scene.add(teaching_img);
 // Image "pop up" near the University of Michigan section
 var bridgify = new THREE.Mesh(
   new THREE.PlaneGeometry(2, 2), // Adjust the size based on your needs
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'bridgify.png') })
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'bridgify-min.png') })
 );
 
 // Position the image near the University of Michigan section
@@ -144,7 +144,7 @@ scene.add(bridgify);
 
 const foodGeo = new THREE.SphereGeometry(1.2, 40, 30); 
 
-const foodTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture.png');
+const foodTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture-min.png');
 const foodMat = new THREE.MeshStandardMaterial({
   map: foodTexture,
   metalness: .5,
@@ -161,8 +161,8 @@ const sphere1Geo = new THREE.SphereGeometry(0.25, 32, 32);
 const sphere2Geo = new THREE.SphereGeometry(0.25, 32, 32);
 
 // Load texture images
-const texture1 = new THREE.TextureLoader().load(imagePath + 'futuristic_black.png');
-const texture2 = new THREE.TextureLoader().load(imagePath + 'futuristic_light_grey.png');
+const texture1 = new THREE.TextureLoader().load(imagePath + 'futuristic_black-min.png');
+const texture2 = new THREE.TextureLoader().load(imagePath + 'futuristic_light_grey-min.png');
 
 // Use MeshStandardMaterial with textures for a shiny look
 const sphere1Mat = new THREE.MeshStandardMaterial({
@@ -203,7 +203,7 @@ scene.add(directionalLight);
 // TorusKnot
 const torusKnotGeometry = new THREE.TorusKnotGeometry(2, 1, 256, 32, 2, 3);
 
-const cometTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture.png');
+const cometTexture = new THREE.TextureLoader().load(imagePath + 'future_planet_texture-min.png');
 const cometMat = new THREE.MeshStandardMaterial({
   map: cometTexture,
   metalness: 1,
