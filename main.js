@@ -64,7 +64,7 @@ var imagePath = '../../photos/';  // Adjust the path to your "photos" folder
 
 var mats = [
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'teaching.jpeg') }),
-  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'group_nasa.jpeg') }),
+  new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'group_nasa.jpg') }),
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase.jpeg') }),
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'showcase.jpeg') }),
   new THREE.MeshLambertMaterial({ map: loader.load(imagePath + 'in_ship.jpeg') }),
